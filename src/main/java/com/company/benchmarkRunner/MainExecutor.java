@@ -25,8 +25,8 @@ public class MainExecutor {
             Graph graph = Graph.fromJson(filename);
             System.out.println("Graph loaded: " + graph.getNumVertices() + " vertices, " + graph.getEdges().size() + " edges\n");
 
-            // Step 1: Find SCCs
-            System.out.println("=== STEP 1: Strongly Connected Components ===");
+            // Find SCCs
+            System.out.println("=== Strongly Connected Components ===");
             TarjanSCC sccFinder = new TarjanSCC(graph);
             List<List<Integer>> sccs = sccFinder.findSCCs();
             System.out.println("Found " + sccs.size() + " SCCs:");
@@ -40,7 +40,7 @@ public class MainExecutor {
             Graph condensation = sccFinder.buildCondensationGraph();
             System.out.println("Condensation: " + condensation.getNumVertices() + " nodes, " + condensation.getEdges().size() + " edges\n");
 
-            // Step 2: Topological Sort
+            // Topological Sort
             System.out.println("=== STEP 2: Topological Sort ===");
             TopologicalSort topoSort = new TopologicalSort(condensation);
             List<Integer> topoOrder = topoSort.sortKahn();
@@ -52,8 +52,8 @@ public class MainExecutor {
                 System.out.println("  " + sccs.get(sccIndex));
             }
 
-            // Step 3: Shortest Paths
-            System.out.println("\n=== STEP 3: Shortest Paths ===");
+            // Shortest Paths
+            System.out.println("\n=== Shortest Paths ===");
             int source = graph.getSource() != null ? graph.getSource() : 0;
             int sourceSCC = -1;
             for (int i = 0; i < sccs.size(); i++) {
