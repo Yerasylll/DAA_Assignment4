@@ -1,0 +1,11 @@
+Dataset,Vertices,Edges,Type,NumSCCs,LargestSCC,SCC_Time_ms,SCC_DFS_Visits,SCC_Edges_Explored,Topo_Time_ms,Topo_Operations,ShortestPath_Time_ms,ShortestPath_Relaxations,CriticalPath_Length,LongestPath_Time_ms,LongestPath_Relaxations
+small_dag,8,10,DAG,8,1,0.123,8,10,0.032,13,0.013,5,15,0.007,10
+small_cyclic,7,12,Cyclic,4,4,0.019,7,12,0.007,6,0.001,0,10,0.010,4
+small_sparse,10,9,DAG,10,1,0.022,10,9,0.011,16,0.004,4,13,0.007,9
+medium_dag,15,25,DAG,15,1,0.027,15,25,0.015,27,0.009,17,28,0.015,25
+medium_cyclic,12,20,Cyclic,4,9,0.030,12,20,0.003,6,0.001,1,11,0.001,2
+medium_dense,18,40,Cyclic,6,13,0.023,18,40,0.005,9,0.001,2,18,0.002,7
+large_dag,30,60,DAG,30,1,0.036,30,60,0.020,52,0.006,29,47,0.010,60
+large_cyclic,25,50,Cyclic,13,13,0.032,25,50,0.046,23,0.006,11,19,0.004,18
+large_dense,40,120,Cyclic,4,37,0.039,40,120,0.004,7,0.008,2,7,0.002,3
+tasks (1),8,7,Cyclic,6,3,0.008,8,7,0.004,10,0.001,3,8,0.002,4
